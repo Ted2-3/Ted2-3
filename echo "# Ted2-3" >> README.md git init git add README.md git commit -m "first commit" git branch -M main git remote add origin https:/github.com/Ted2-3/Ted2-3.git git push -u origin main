@@ -1,0 +1,18 @@
+(async () => {
+  try {
+    const likeTweet = await twitterClient.tweets.usersIdLike(
+      // The ID of the user that is requesting to like the tweet
+      "1324848235714736129",
+
+      {
+        // The ID of the tweet that the user is requesting to like
+        tweet_id: "1521887626935947265",
+      }
+    );
+    console.dir(likeTweet, {
+      depth: null,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+})();
